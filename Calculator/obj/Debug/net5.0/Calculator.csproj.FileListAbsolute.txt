@@ -1,0 +1,15 @@
+/Users/jair/RiderProjects/Calculator/Calculator/bin/Debug/net5.0/Calculator.deps.json
+/Users/jair/RiderProjects/Calculator/Calculator/bin/Debug/net5.0/Calculator.runtimeconfig.json
+/Users/jair/RiderProjects/Calculator/Calculator/bin/Debug/net5.0/Calculator.runtimeconfig.dev.json
+/Users/jair/RiderProjects/Calculator/Calculator/bin/Debug/net5.0/Calculator.dll
+/Users/jair/RiderProjects/Calculator/Calculator/bin/Debug/net5.0/ref/Calculator.dll
+/Users/jair/RiderProjects/Calculator/Calculator/bin/Debug/net5.0/Calculator.pdb
+/Users/jair/RiderProjects/Calculator/Calculator/obj/Debug/net5.0/Calculator.csproj.AssemblyReference.cache
+/Users/jair/RiderProjects/Calculator/Calculator/obj/Debug/net5.0/Calculator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jair/RiderProjects/Calculator/Calculator/obj/Debug/net5.0/Calculator.AssemblyInfoInputs.cache
+/Users/jair/RiderProjects/Calculator/Calculator/obj/Debug/net5.0/Calculator.AssemblyInfo.cs
+/Users/jair/RiderProjects/Calculator/Calculator/obj/Debug/net5.0/Calculator.csproj.CoreCompileInputs.cache
+/Users/jair/RiderProjects/Calculator/Calculator/obj/Debug/net5.0/Calculator.dll
+/Users/jair/RiderProjects/Calculator/Calculator/obj/Debug/net5.0/ref/Calculator.dll
+/Users/jair/RiderProjects/Calculator/Calculator/obj/Debug/net5.0/Calculator.pdb
+/Users/jair/RiderProjects/Calculator/Calculator/obj/Debug/net5.0/Calculator.genruntimeconfig.cache
