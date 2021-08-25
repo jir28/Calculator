@@ -10,7 +10,7 @@ namespace Calculator
             int opcion;
             int a,b,c;
             int repeticion = 1; //Varible para iniciar ciclo While
-            double raiz1, raiz2,q,r,angle,q3,r2,x1,x2,x3;
+            double raiz1, raiz2,q,r,angle,q3,r2,x1,x2,x3,evaluar;
 
 
             //Inicio del programa con while
@@ -34,10 +34,18 @@ namespace Calculator
                         a = int.Parse(Console.ReadLine());
                         b = int.Parse(Console.ReadLine());
                         c = int.Parse(Console.ReadLine());
-                        raiz1 = ((-1 * b) + Math.Sqrt(Math.Pow(b, 2) - (4 * a * c)))/(2*a); 
-                        raiz2 = ((-1 * b) - Math.Sqrt(Math.Pow(b, 2) - (4 * a * c)))/(2*a); 
-                        Console.WriteLine("Valor de x1: "+raiz1);
-                        Console.WriteLine("Valor de x2: "+raiz2);
+                        evaluar = Math.Pow(b, 2) - (4 * a * c);
+                        if (evaluar>=0)
+                        {
+                            raiz1 = (-1 * b + Math.Sqrt(evaluar))/(2*a); 
+                            raiz2 = (-1 * b - Math.Sqrt(evaluar))/(2*a); 
+                            Console.WriteLine("Valor de x1: "+raiz1);
+                            Console.WriteLine("Valor de x2: "+raiz2);
+                        }
+                        else
+                        {
+                            Console.WriteLine("No hay solucion");
+                        }
                         break;
                     case 2:
                         Console.WriteLine("Ecuacion de la forma x^3 + ax^2 + bx + c = 0");
@@ -45,21 +53,23 @@ namespace Calculator
                         a = int.Parse(Console.ReadLine());
                         b = int.Parse(Console.ReadLine());
                         c = int.Parse(Console.ReadLine());
-                        q = (Math.Pow(a, 2) - (3 * b)) / 9;
-                        r = ((2 * (Math.Pow(a, 3))) - (9 * a * b) + (27 * c)) / 54;
+                        q = (Math.Pow(a, 2) - 3 * b) / 9;
+                        r = (2 * Math.Pow(a, 3) - 9 * a * b + 27 * c) / 54;
                         q3 = Math.Pow(q, 3);
                         r2 = Math.Pow(r,2);
                         if (r2<q3)
                         {
-                            Console.WriteLine("Es Real");
-                            angle = (Math.Acos(r / (Math.Sqrt(q3))));
-                            Console.WriteLine("Valor de thetha: " + angle);
-                            x1 = (-2 * (Math.Sqrt(q))) * Math.Cos(angle / 3) - (a/3);
+                            angle = Math.Acos(r / Math.Sqrt(q3));
+                            x1 = -2 * Math.Sqrt(q) * Math.Cos(angle / 3) - (a/3);
+                            x2 = -2 * Math.Sqrt(q) * Math.Cos((angle + 2 * Math.PI)/3) - (a/3);
+                            x3 = -2 * Math.Sqrt(q) * Math.Cos((angle - 2 * Math.PI)/3) - (a/3);
                             Console.WriteLine("Valor de x1: " + x1);
+                            Console.WriteLine("Valor de x2: " + x2);
+                            Console.WriteLine("Valor de x3: " + x3);
                         }
                         else
                         {
-                            Console.WriteLine("Imaginaria, no se puede");
+                            Console.WriteLine("Tiene una raiz real y dos complejas tu ecuacion");
                         }
                         break; 
                     case 3:
