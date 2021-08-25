@@ -8,9 +8,9 @@ namespace Calculator
         {
             //Creacion de variables
             int opcion;
-            int pot = 2;
+            int a,b,c;
             int repeticion = 1; //Varible para iniciar ciclo While
-            double a, b, c, raiz1, raiz2,pb;
+            double raiz1, raiz2,q,r,angle,q3,r2,x1,x2,x3;
 
 
             //Inicio del programa con while
@@ -31,16 +31,36 @@ namespace Calculator
                 {
                     case 1:
                         Console.WriteLine("Ingresa los valores de 'a', 'b' y 'c' respectivamente");
-                        a = Convert.ToDouble(Console.ReadLine());
-                        b = Convert.ToDouble(Console.ReadLine());
-                        c = Convert.ToDouble(Console.ReadLine());
-                        pb = Math.Pow(a, pot);
-                        raiz1 = Math.Sqrt(pb-(4*(a*c)));
-                        
-                        Console.WriteLine(raiz1);
+                        a = int.Parse(Console.ReadLine());
+                        b = int.Parse(Console.ReadLine());
+                        c = int.Parse(Console.ReadLine());
+                        raiz1 = ((-1 * b) + Math.Sqrt(Math.Pow(b, 2) - (4 * a * c)))/(2*a); 
+                        raiz2 = ((-1 * b) - Math.Sqrt(Math.Pow(b, 2) - (4 * a * c)))/(2*a); 
+                        Console.WriteLine("Valor de x1: "+raiz1);
+                        Console.WriteLine("Valor de x2: "+raiz2);
                         break;
                     case 2:
-                        Console.WriteLine("Has elegido 2");
+                        Console.WriteLine("Ecuacion de la forma x^3 + ax^2 + bx + c = 0");
+                        Console.WriteLine("Ingresa los valores de a, b, c respectivamente");
+                        a = int.Parse(Console.ReadLine());
+                        b = int.Parse(Console.ReadLine());
+                        c = int.Parse(Console.ReadLine());
+                        q = (Math.Pow(a, 2) - (3 * b)) / 9;
+                        r = ((2 * (Math.Pow(a, 3))) - (9 * a * b) + (27 * c)) / 54;
+                        q3 = Math.Pow(q, 3);
+                        r2 = Math.Pow(r,2);
+                        if (r2<q3)
+                        {
+                            Console.WriteLine("Es Real");
+                            angle = (Math.Acos(r / (Math.Sqrt(q3))));
+                            Console.WriteLine("Valor de thetha: " + angle);
+                            x1 = (-2 * (Math.Sqrt(q))) * Math.Cos(angle / 3) - (a/3);
+                            Console.WriteLine("Valor de x1: " + x1);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Imaginaria, no se puede");
+                        }
                         break; 
                     case 3:
                         Console.WriteLine("has elegido 3");
