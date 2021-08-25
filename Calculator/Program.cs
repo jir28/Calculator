@@ -10,7 +10,7 @@ namespace Calculator
             int opcion;
             int a,b,c;
             int repeticion = 1; //Varible para iniciar ciclo While
-            double raiz1, raiz2,q,r,angle,q3,r2,x1,x2,x3,evaluar;
+            double raiz1, raiz2,q,r,angle,q3,r2,x1,x2,x3,evaluar,m,b2,x;
 
 
             //Inicio del programa con while
@@ -73,19 +73,19 @@ namespace Calculator
                         }
                         break; 
                     case 3:
-                        Console.WriteLine("has elegido 3");
+                        Console.WriteLine("Ingresa los valores de 'm' y 'b' respectivamente");
+                        m = double.Parse(Console.ReadLine());
+                        b2 = double.Parse(Console.ReadLine());
+                        x = (-1 * b2) / m;
+                        Console.WriteLine("El valor de 'x' es: " + x);
                         break;
                     default:
-                        Console.WriteLine("Escoge un numero entre 1-3");
+                        Console.WriteLine("Ingresa una opcion correcta");
                         break;
                 }
-                
-                
-                
                 Console.WriteLine("Presione 1 para intentar de nuevo o 2 para salir");
                 repeticion = Convert.ToInt32(Console.ReadLine());
             }
-            
             
 
         }
