@@ -6,9 +6,9 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            //Creacion de variables
-            int opcion;
-            int a,b,c;
+            //Calculadora de raices hecha en C# (C michito) por Jair de la UAM Lerma
+            //Declaracion de variables
+            int a,b,c,opcion;
             int repeticion = 1; //Varible para iniciar ciclo While
             double raiz1, raiz2,q,r,angle,q3,r2,x1,x2,x3,evaluar,m,b2,x;
 
